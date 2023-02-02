@@ -44,7 +44,12 @@ public class playerControl : MonoBehaviour
 
         if (Input.GetKey("-"))
         {
-            throttle = (Mathf.Abs(throttle - 1));
+            throttle = throttle - 1;
+        }
+
+        if (throttle < 0)
+        {
+            throttle = 0;
         }
     }
 }
