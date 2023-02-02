@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 20
+  controlID: 79
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 55
+  controlID: 78
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 56
+  controlID: 50
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,7 +336,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 7
+  m_LastVerticalScrollValue: 378
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -382,14 +382,15 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: /Users/ZABAYRER/Desktop/Unity Projects/CreateWithCode/flightSim
+  m_LastProjectPath: /Users/ZABAYRER/Documents/GitHub/Flight-Sim/flightSim
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -424,7 +425,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e05a0000e25a0000e45a0000e65a0000e85a0000ea5a0000
+    m_ExpandedIDs: ffffffff00000000e05a0000e25a0000e45a0000e65a0000e85a0000ea5a00002a5b00002e5b0000665b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -705,9 +706,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 338.82172, y: 23.559994, z: 122.27682}
+    m_Target: {x: -8.870089, y: 176.33922, z: 536.4961}
     speed: 2
-    m_Value: {x: 338.82172, y: 23.559994, z: 122.27682}
+    m_Value: {x: -8.870089, y: 176.33922, z: 536.4961}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -754,13 +755,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.22552557, y: -0.3859308, z: 0.09788636, w: 0.88916653}
+    m_Target: {x: -0.014588768, y: 0.46702948, z: 0.0077066896, w: 0.8840882}
     speed: 2
-    m_Value: {x: 0.22552523, y: -0.3859302, z: 0.09788621, w: 0.88916516}
+    m_Value: {x: -0.014588762, y: 0.4670293, z: 0.007706687, w: 0.8840879}
   m_Size:
-    m_Target: 743.7048
+    m_Target: 522.15015
     speed: 2
-    m_Value: 665.0428
+    m_Value: 522.15015
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -816,9 +817,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 165a0000
-      m_LastClickedID: 23062
-      m_ExpandedIDs: 32fbffff
+      m_SelectedIDs: 0c5a0000
+      m_LastClickedID: 23052
+      m_ExpandedIDs: 34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -834,7 +835,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 11}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
