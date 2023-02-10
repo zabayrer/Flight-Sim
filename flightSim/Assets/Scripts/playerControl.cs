@@ -10,7 +10,7 @@ public class playerControl : MonoBehaviour
     private float turnSpeed = 25;
     private float horizontalInput;
     private float forwardInput;
-    
+    public GameObject projectilePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -35,21 +35,33 @@ public class playerControl : MonoBehaviour
 
         //vehicle throttle
         transform.Translate(Vector3.forward * Time.deltaTime * throttle);
-
+        //change throttle
         if (Input.GetKey("="))
         {
-            if (throttle<100)
-                throttle=throttle+1;
+            if (throttle < 100)
+                throttle = throttle + 1;
         }
 
         if (Input.GetKey("-"))
         {
             throttle = throttle - 1;
         }
-
+        //make sure plane can't go backwards
         if (throttle < 0)
         {
             throttle = 0;
+        }
+        //make sure plane can't go below ground, will change once full world is in place
+        if (transform.position.y < -25)
+        {
+            //hard-coded values go brr
+            transform.position = new Vector3(transform.position.x, -25, transform.position.z);
+            Debug.Log("game over");
+        }
+        //when space is pressed, launch a projectile
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab, transform.position, transform.rotation);
         }
     }
 }
