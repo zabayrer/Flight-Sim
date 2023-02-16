@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/moveForward.cs"
 "Assets/Scripts/playerControl.cs"
+"Assets/Scripts/spawnManager.cs"
 "Assets/Scripts/turnProp.cs"
 -langversion:9.0
 
