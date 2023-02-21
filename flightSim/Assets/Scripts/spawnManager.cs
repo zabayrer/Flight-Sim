@@ -26,10 +26,14 @@ public class spawnManager : MonoBehaviour
 
     void  spawnTarget()
     {
+        //keep target number below the target max
         if (targetNum < targetMax)
         {
+            //get a random position within world bounds
             Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), (Random.Range(0, spawnRangeY)), (Random.Range(-spawnRangeZ, spawnRangeZ)));
+            //make a target at said random position
             Instantiate(targetPrefab, spawnPos, targetPrefab.transform.rotation);
+            //add one to the target number and tell the player what the target number is
             targetNum += 1;
             Debug.Log(targetNum);
         }

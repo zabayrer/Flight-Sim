@@ -78,14 +78,12 @@ public class playerControl : MonoBehaviour
             throttle = 0;
         }
     }
-
+    //die if the player collides with a world object
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("WorldObject"))
             {
-                gameOver = true;
-                
-                
+                gameOver = true;                
             }
     }
 }
