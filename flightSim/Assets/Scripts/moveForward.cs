@@ -6,6 +6,9 @@ public class moveForward : MonoBehaviour
 {
     public float speed = 15.0f;
     public float score = 0;
+    public float zBound = 2578;
+    public float xBound = 2487;
+    public float yBound = 350;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,26 +18,41 @@ public class moveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //go forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
-    }
-/* //haha none of this works aaaahhh
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("WorldObject"))
+
+        //destroy projectile when out of game boundary
+        if (transform.position.z > zBound)
         {
             Destroy(gameObject);
-        }else if (collision.gameObject.CompareTag("target"))
-        {
-            Destroy(gameObject); //target and projectile
-            score += 1;
-            Debug.Log(score);
-            //targetNum -= 1
         }
-    }*/
-    
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(gameObject);
-
+        if (transform.position.z < -zBound)
+        {
+            Destroy(gameObject);
+        }
+        if (transform.position.x > xBound)
+        {
+            Destroy(gameObject);
+        }
+        if (transform.position.x < -xBound)
+        {
+            Destroy(gameObject);
+        }
+        if (transform.position.y > yBound)
+        {
+            Destroy(gameObject);
+        }
     }
+ 
+    //destroy the projectile if it collides with either a world object or a target.
+    //side note: don't known why OnCollisonEnter wasn't working, David helped me out.
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("WorldObject") || collision.gameObject.CompareTag("target"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }
