@@ -9,9 +9,10 @@ public class spawnManager : MonoBehaviour
     private float spawnRangeZ = 2578;
     private float spawnRangeY = 300;
     private float startDelay = 5;
-    private float spawnInterval = 15;
+    private float spawnInterval = 1.5f;
     public int targetNum = 0;
     private float targetMax = 50;
+    private int turnSpeed = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class spawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
     }
 
     void  spawnTarget()
@@ -32,7 +33,7 @@ public class spawnManager : MonoBehaviour
             //get a random position within world bounds
             Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), (Random.Range(0, spawnRangeY)), (Random.Range(-spawnRangeZ, spawnRangeZ)));
             //make a target at said random position
-            Instantiate(targetPrefab, spawnPos, targetPrefab.transform.rotation);
+            Instantiate(targetPrefab, spawnPos, transform.rotation);
             //add one to the target number and tell the player what the target number is
             targetNum += 1;
             Debug.Log(targetNum);
