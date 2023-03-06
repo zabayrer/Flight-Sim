@@ -9,10 +9,10 @@ public class spawnManager : MonoBehaviour
     private float spawnRangeZ = 2578;
     private float spawnRangeY = 300;
     private float startDelay = 5;
-    private float spawnInterval = 1.5f;
+    private float spawnInterval = 1.5f;//was 15
     public int targetNum = 0;
     private float targetMax = 50;
-    private int turnSpeed = 30;
+    private int turnSpeed = 13;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +30,11 @@ public class spawnManager : MonoBehaviour
         //keep target number below the target max
         if (targetNum < targetMax)
         {
-            //get a random position within world bounds
+            //get a random position and rotation within world bounds
             Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), (Random.Range(0, spawnRangeY)), (Random.Range(-spawnRangeZ, spawnRangeZ)));
-            //make a target at said random position
-            Instantiate(targetPrefab, spawnPos, transform.rotation);
+            var newRotation = Quaternion.Euler(90, (Random.Range(0, 360)), 0);
+            //make a target at said random position and rotation
+            Instantiate(targetPrefab, spawnPos, newRotation);
             //add one to the target number and tell the player what the target number is
             targetNum += 1;
             Debug.Log(targetNum);
