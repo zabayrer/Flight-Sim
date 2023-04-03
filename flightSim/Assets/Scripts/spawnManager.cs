@@ -9,10 +9,9 @@ public class spawnManager : MonoBehaviour
     private float spawnRangeZ = 2578;
     private float spawnRangeY = 300;
     private float startDelay = 5;
-    private float spawnInterval = 1.5f;//was 15
+    private float spawnInterval = 15.0f;
     public int targetNum = 0;
     private float targetMax = 50;
-    private int turnSpeed = 13;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,7 @@ public class spawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
+        
     }
 
     void  spawnTarget()

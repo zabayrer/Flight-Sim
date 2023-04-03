@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class moveForward : MonoBehaviour
 {
-    public float speed = 15.0f;
+    public float speed = 150.0f;
     public float score = 0;
     public float zBound = 2578;
     public float xBound = 2487;
